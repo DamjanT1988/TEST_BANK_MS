@@ -11,13 +11,14 @@ namespace BankLibrary
     //classes have properties and methods (functions)
     public class BankAccount
     {
-        //-----GETTERS/SETTERS-PROPERTIES
+        //-----PROPERTIES - GETTERS/SETTERS
 
         //1 declare public properties actually
         //(ex. template/form fields) with getters 
         //string as some account numnbers have letters
         public string Number { get; }
         public string Owner { get; set; }
+
         //14 code getter to get balance for list
         public decimal Balance
         {
@@ -41,6 +42,8 @@ namespace BankLibrary
 
         //13 make a new list of all transactions - have to always make a new object list
         private List<Transaction> allTransactions = new List<Transaction>();
+
+
 
         //------METHODS
         
@@ -71,6 +74,7 @@ namespace BankLibrary
                 //20 throw an exception (exceptional moment), otherwise stops the program as error
                 throw new ArgumentOutOfRangeException(nameof(amount), "Deposit amount must be positive");
             }
+
 
             //21 store the deposit, create a new transaction object
             var deposit = new Transaction(amount, date, note);

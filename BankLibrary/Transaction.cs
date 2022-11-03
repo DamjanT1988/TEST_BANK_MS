@@ -16,6 +16,8 @@ namespace BankLibrary
         public DateTime Date { get; }
         public string Notes { get; }
 
+
+
         //------METHODS
 
         //11 declare class object with constructor
