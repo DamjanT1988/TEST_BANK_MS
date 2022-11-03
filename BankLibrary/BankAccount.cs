@@ -11,7 +11,10 @@ namespace BankLibrary
     //classes have properties and methods (functions)
     public class BankAccount
     {
-        //1 declare public properties actually (ex. template/form fields) with getters & setters
+        //-----GETTERS/SETTERS-PROPERTIES
+
+        //1 declare public properties actually
+        //(ex. template/form fields) with getters 
         //string as some account numnbers have letters
         public string Number { get; }
         public string Owner { get; set; }
@@ -39,6 +42,8 @@ namespace BankLibrary
         //13 make a new list of all transactions - have to always make a new object list
         private List<Transaction> allTransactions = new List<Transaction>();
 
+        //------METHODS
+        
         //3 create a constructor (ex. template or form of a bank account) for the bank account
         public BankAccount(string name, decimal initialBalance)
         {

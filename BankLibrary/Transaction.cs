@@ -9,18 +9,14 @@ namespace BankLibrary
 {
     public class Transaction
     {
+        //------PROPERTIES - GETTERS/SETTERS
+
         //10 declare properties for class
         public decimal Amount { get; }
         public DateTime Date { get; }
         public string Notes { get; }
 
-
-        //DOTNET 2 convert amount numbers to words
-        /*public string AmountForHumans { get
-            {
-                //return Amount.ToWords();
-            }
-        }*/
+        //------METHODS
 
         //11 declare class object with constructor
         public Transaction(decimal amount, DateTime date, string note)
