@@ -8,18 +8,20 @@ using System.Threading.Tasks;
 namespace BankLibrary
 {
     //step 1-5 is about make an object and defining it
-    //classes have properties and methods (functions)
+    //classes have fields (properties) and methods (functions, prporties)
+    //10-12 in transaction.cs - 10-18 about transactions
     public class BankAccount
     {
-        //-----PROPERTIES - GETTERS/SETTERS
+        //-----FIELDS (PROPERTIES) - GETTERS/SETTERS
 
         //1 declare public properties actually
-        //(ex. template/form fields) with getters 
+        //(ex. template/form fields) with getters/setters 
         //string as some account numnbers have letters
         public string Number { get; }
         public string Owner { get; set; }
 
         //14 code getter to get balance for list
+        //real properties
         public decimal Balance
         {
             get
@@ -45,6 +47,7 @@ namespace BankLibrary
 
 
 
+
         //------METHODS
         
         //3 create a constructor (ex. template or form of a bank account) for the bank account
@@ -63,10 +66,12 @@ namespace BankLibrary
             accountNumberSeed++;
         }
 
-        //2 declare functions - methods
+        
+        //2-1 declare functions - methods
         //these declared can then interact
         public void MakeDeposit(decimal amount, DateTime date, string note)
         {
+            
             //exceptions guard the system
             //19 check of deposit is 0 or negative, if not then store the transaction/deposit
             if (amount <= 0)
@@ -82,9 +87,12 @@ namespace BankLibrary
             allTransactions.Add(deposit);
         }
 
-        //2 method
+
+
+        //2-2 method
         public void MakeWithDrawal(decimal amount, DateTime date, string note)
         {
+        
             //exceptions guard the system
             //23 check if withdrawal is 0 or negative
             if (amount <= 0)
@@ -106,6 +114,8 @@ namespace BankLibrary
             //28 update the transactions list
             allTransactions.Add(withdrawal);
         }
+
+
 
         //35 create a log of all transactions
         public string GetAccountHistory()

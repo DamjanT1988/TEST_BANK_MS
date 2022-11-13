@@ -9,7 +9,7 @@ namespace BankLibrary
 {
     public class Transaction
     {
-        //------PROPERTIES - GETTERS/SETTERS
+        //------FIELDS - GETTERS/SETTERS
 
         //10 declare properties for class
         public decimal Amount { get; }

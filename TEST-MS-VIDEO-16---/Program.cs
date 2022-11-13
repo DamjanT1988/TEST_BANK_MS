@@ -27,9 +27,11 @@ namespace TEST_MS_VIDEO_16___
 
 
 
+
             //-----TEST
 
             //32 test the program, with exception the program continues in spite of error
+            /*
             try
             {
                 var invalidAccount = new BankAccount("invalid", -55);
@@ -52,7 +54,8 @@ namespace TEST_MS_VIDEO_16___
                 Console.WriteLine("Exception caught withdrawing too much funds/not enough balance");
                 Console.WriteLine(e.ToString());
             }
-            
+            */
+
 
 
             //-----DOTNET
@@ -69,6 +72,9 @@ namespace TEST_MS_VIDEO_16___
             account.MakeWithDrawal(500, DateTime.Now, "Protein4");
             account.MakeWithDrawal(50000, DateTime.Now, "Protein5");
             account.MakeWithDrawal(500, DateTime.Now, "Protein6");
+
+            //42 check the current balance
+            Console.WriteLine(account.Balance);
         }
     }
 }
