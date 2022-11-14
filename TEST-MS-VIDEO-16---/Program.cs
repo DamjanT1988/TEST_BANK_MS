@@ -83,7 +83,7 @@ namespace TEST_MS_VIDEO_16___
             Console.WriteLine("M: " + account2.GetAccountHistory());
 
             //44 check the current balance
-            Console.WriteLine("\nD: " + account.Balance);
+            Console.WriteLine("D: " + account.Balance);
             Console.WriteLine("M: " + account2.Balance);
 
         }
