@@ -60,7 +60,7 @@ namespace BankLibrary
             //29 use method MakeDeposit
             MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
 
-            //8 method to adjust the account number; to string as some account numnbers have letters
+            //8 to string as some account numnbers have letters
             this.Number = accountNumberSeed.ToString();
             //9 adjust account number to new accounts by 1
             accountNumberSeed++;
@@ -71,7 +71,7 @@ namespace BankLibrary
         //these declared can then interact
         public void MakeDeposit(decimal amount, DateTime date, string note)
         {
-            
+         /*   
             //exceptions guard the system
             //19 check of deposit is 0 or negative, if not then store the transaction/deposit
             if (amount <= 0)
@@ -79,7 +79,7 @@ namespace BankLibrary
                 //20 throw an exception (exceptional moment), otherwise stops the program as error
                 throw new ArgumentOutOfRangeException(nameof(amount), "Deposit amount must be positive");
             }
-
+         */
 
             //21 store the deposit, create a new transaction object
             var deposit = new Transaction(amount, date, note);
@@ -92,7 +92,7 @@ namespace BankLibrary
         //2-2 method
         public void MakeWithDrawal(decimal amount, DateTime date, string note)
         {
-        
+        /*
             //exceptions guard the system
             //23 check if withdrawal is 0 or negative
             if (amount <= 0)
@@ -107,11 +107,11 @@ namespace BankLibrary
                 //26 throw an exception, "invalid operations´"
                 throw new InvalidOperationException("Not sufficient funds for the withdrawal1");
             }
-
+        */
 
             //27 store the withdrawal, create a new transaction object
             var withdrawal = new Transaction(-amount, date, note);
-            //28 update the transactions list
+            //28 update the transactions list--> 28 in bankaccount
             allTransactions.Add(withdrawal);
         }
 
@@ -131,7 +131,7 @@ namespace BankLibrary
                 //39 ROWS-create the content
                 report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
             }
-            //40 return a string
+            //40 return as a string
             return report.ToString();
         }
     }

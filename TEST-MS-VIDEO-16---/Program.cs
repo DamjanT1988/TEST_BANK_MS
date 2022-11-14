@@ -13,17 +13,22 @@ namespace TEST_MS_VIDEO_16___
 
             //5 initialize new object, bank account
             var account = new BankAccount("Damjan", 500000);
+            var account2 = new BankAccount("Marko", 5000);
+            
             //6 write out
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance}.");
-
+            Console.WriteLine($"Account {account2.Number} was created for {account2.Owner} with {account2.Balance}.");
             //30 make a  test, call MakeWithDrawal method from BankAccount class
             account.MakeWithDrawal(500, DateTime.Now, "Protein");
+            account2.MakeWithDrawal(800, DateTime.Now, "Protein-MAX");
 
             //31 check the current balance
-            Console.WriteLine(account.Balance);
+            Console.WriteLine("\nD: " + account.Balance);
+            Console.WriteLine("M: " + account2.Balance);
 
             //41 print the account history by callong method in object
-            Console.WriteLine(account.GetAccountHistory());
+            Console.WriteLine("\nD: " + account.GetAccountHistory());
+            Console.WriteLine("M: " + account2.GetAccountHistory());
 
 
 
@@ -66,15 +71,21 @@ namespace TEST_MS_VIDEO_16___
             Console.WriteLine(666.ToWords());
 
 
-            //41 DOTNET-videos
+            //42
             account.MakeWithDrawal(500, DateTime.Now, "Protein2");
             account.MakeWithDrawal(500, DateTime.Now, "Protein3");
-            account.MakeWithDrawal(500, DateTime.Now, "Protein4");
+            account2.MakeWithDrawal(500, DateTime.Now, "Protein4");
             account.MakeWithDrawal(50000, DateTime.Now, "Protein5");
-            account.MakeWithDrawal(500, DateTime.Now, "Protein6");
+            account2.MakeWithDrawal(500, DateTime.Now, "Protein6");
 
-            //42 check the current balance
-            Console.WriteLine(account.Balance);
+            //43 print the account history by callong method in object
+            Console.WriteLine("\nD: " + account.GetAccountHistory());
+            Console.WriteLine("M: " + account2.GetAccountHistory());
+
+            //44 check the current balance
+            Console.WriteLine("\nD: " + account.Balance);
+            Console.WriteLine("M: " + account2.Balance);
+
         }
     }
 }
