@@ -92,7 +92,7 @@ namespace BankLibrary
         //2-2 method
         public void MakeWithDrawal(decimal amount, DateTime date, string note)
         {
-        /*
+        
             //exceptions guard the system
             //23 check if withdrawal is 0 or negative
             if (amount <= 0)
@@ -107,7 +107,7 @@ namespace BankLibrary
                 //26 throw an exception, "invalid operations´"
                 throw new InvalidOperationException("Not sufficient funds for the withdrawal1");
             }
-        */
+        
 
             //27 store the withdrawal, create a new transaction object
             var withdrawal = new Transaction(-amount, date, note);

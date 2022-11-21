@@ -76,7 +76,7 @@ namespace TEST_MS_VIDEO_16___
             account.MakeWithDrawal(500, DateTime.Now, "Protein3");
             account2.MakeWithDrawal(500, DateTime.Now, "Protein4");
             account.MakeWithDrawal(50000, DateTime.Now, "Protein5");
-            account2.MakeWithDrawal(500, DateTime.Now, "Protein6");
+            account2.MakeWithDrawal(-500, DateTime.Now, "Protein6");
 
             //43 print the account history by callong method in object
             Console.WriteLine("\nD: " + account.GetAccountHistory());
