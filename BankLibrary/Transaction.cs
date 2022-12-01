@@ -12,13 +12,13 @@ namespace BankLibrary
         //------FIELDS - GETTERS/SETTERS
 
         //10 declare properties for class
-        public decimal Amount { get; }
+        public decimal Amount { get; }//SET only with external setting?
         public DateTime Date { get; }
         public string Notes { get; }
 
 
 
-        //------METHODS
+        //------CONSTRUCTOR
 
         //11 declare class object with constructor
         public Transaction(decimal amount, DateTime date, string note)

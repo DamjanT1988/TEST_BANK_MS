@@ -40,7 +40,7 @@ namespace BankLibrary
         }
 
         //7 private property for private number
-        private static int accountNumberSeed = 1234567890;
+        private static int accountNumberSeed = 1234567890;//const cannot change anywhere, also readonly
 
         //13 make a new list of all transactions - have to always make a new object list
         private List<Transaction> allTransactions = new List<Transaction>();
@@ -48,8 +48,8 @@ namespace BankLibrary
 
 
 
-        //------METHODS
-        
+
+        //------CONSTRUCTORS
         //3 create a constructor (ex. template or form of a bank account) for the bank account
         public BankAccount(string name, decimal initialBalance)
         {
@@ -57,16 +57,21 @@ namespace BankLibrary
             this.Owner = name;
             //this.Balance = initialBalance; --> do a deposit för 0 balance
 
-            //29 use method MakeDeposit
-            MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
-
             //8 to string as some account numnbers have letters
             this.Number = accountNumberSeed.ToString();
             //9 adjust account number to new accounts by 1
             accountNumberSeed++;
+
+            //29 use method MakeDeposit
+            MakeDeposit(initialBalance, DateTime.Now, "Initial Balance");
+
         }
 
-        
+
+
+
+        //------METHODS
+
         //2-1 declare functions - methods
         //these declared can then interact
         public void MakeDeposit(decimal amount, DateTime date, string note)
@@ -95,6 +100,7 @@ namespace BankLibrary
         
             //exceptions guard the system
             //23 check if withdrawal is 0 or negative
+            /*
             if (amount <= 0)
             {
                 //24 throw an exception (exceptional moment), otherwise stops the program as error
@@ -107,7 +113,7 @@ namespace BankLibrary
                 //26 throw an exception, "invalid operations´"
                 throw new InvalidOperationException("Not sufficient funds for the withdrawal1");
             }
-        
+            */
 
             //27 store the withdrawal, create a new transaction object
             var withdrawal = new Transaction(-amount, date, note);

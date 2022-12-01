@@ -18,6 +18,7 @@ namespace TEST_MS_VIDEO_16___
             //6 write out
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance}.");
             Console.WriteLine($"Account {account2.Number} was created for {account2.Owner} with {account2.Balance}.");
+            
             //30 make a  test, call MakeWithDrawal method from BankAccount class
             account.MakeWithDrawal(500, DateTime.Now, "Protein");
             account2.MakeWithDrawal(800, DateTime.Now, "Protein-MAX");
